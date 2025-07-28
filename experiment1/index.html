@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Registration form</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div>
+    <div class="container">
       <h1>Student Registration Form</h1>
-      <form>
+      <form class="container">
         <div>
           <label for="name">Name:</label>
           <input
@@ -19,7 +20,6 @@
             type="text"
           />
         </div>
-        <br />
         <div>
           <label for="email">Email:</label>
           <input
@@ -29,7 +29,6 @@
             type="email"
           />
         </div>
-        <br />
         <div>
           <label for="age">Age:</label>
           <input
@@ -41,8 +40,7 @@
             max="100"
           />
         </div>
-        <br />
-        <button>Register</button>
+        <button id="submit-btn">Register</button>
       </form>
     </div>
   </body>
