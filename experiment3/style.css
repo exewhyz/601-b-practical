@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* dark mode with css variables with default white */
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+  --navbar-color: rgb(37, 227, 37);
+  --navbar-text-color: white;
+  --sidebar-color: rgb(195, 195, 195);
+}
+
+.dark-mode {
+  --primary-color: black;
+  --secondary-color: white;
+  --navbar-color: rgb(65, 64, 64);
+  --navbar-text-color: white;
+  --sidebar-color: rgb(33, 33, 33);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 10% 1fr 10%;
+  height: 100%;
+  width: 100%;
+}
+
+#navbar {
+  grid-area: nav;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--navbar-color);
+  color: var(--navbar-text-color);
+}
+#sidebar {
+  grid-area: sidebar;
+  padding: 1.2em 1.5em;
+  background-color: var(--sidebar-color);
+}
+#main {
+  grid-area: main;
+  padding: 1.2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--navbar-color);
+  color: var(--navbar-text-color);
+}
